@@ -7,7 +7,7 @@ HOMEPAGE="https://ziglang.org/"
 LICENSE="MIT"
 
 EGIT_REPO_URI="https://github.com/ziglang/zig.git"
-EGIT_COMMIT="609716524169c538b7f12666c3f9bb46a0aeeb3c"
+EGIT_COMMIT="1310ef75777209f061bfd61473db75911538b5ff"
 
 SLOT="0"
 KEYWORDS="~amd64"
@@ -40,4 +40,9 @@ src_configure() {
 	local CMAKE_BUILD_TYPE='Debug'
 
 	cmake_src_configure
+}
+
+src_install() {
+	cmake_src_install
+	doenvd "${FILESDIR}/99zig"
 }
