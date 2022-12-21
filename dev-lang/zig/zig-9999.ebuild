@@ -7,7 +7,7 @@ HOMEPAGE="https://ziglang.org/"
 LICENSE="MIT"
 
 EGIT_REPO_URI="https://github.com/ziglang/zig.git"
-EGIT_COMMIT="1310ef75777209f061bfd61473db75911538b5ff"
+EGIT_COMMIT="471f3c470fdeb00596ebd0d045a5b0dab737947d"
 
 SLOT="0"
 KEYWORDS="~amd64"
