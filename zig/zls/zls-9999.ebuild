@@ -13,17 +13,17 @@ KEYWORDS="~amd64"
 RESTRICT="strip"
 
 DEPEND="
-	dev-lang/zig
+	=dev-lang/zig-9999
 "
 RDEPEND="${DEPEND}"
 
 src_compile() {
 	cd "${S}"
-	/opt/zig-9999/bin/zig build
+	/opt/zig/zig-9999/bin/zig build
 }
 
 src_install() {
 	cd "${S}"
-	/opt/zig-9999/bin/zig build --prefix "${D}/opt/zls-9999/" install
+	/opt/zig/zig-9999/bin/zig build --prefix "${D}/opt/zig/zls-9999/" install
 	doenvd "${FILESDIR}/99zls"
 }
